@@ -1,0 +1,384 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block page_css %}
+    <!-- Custome CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ieat/faq.css' %}">
+{% endblock %}
+{% block page_content %}
+    <div class="faq-content container-fluid">
+        <!-- faq navbar -->
+        <div class="container-fluid faq-nav">
+            <div class="row nav-body">
+                <ul class="nav nav-pills card-header-pills mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active"> For Customers </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"> For Restaurants </a>
+                    </li>
+                </ul>
+            </div>
+        </div><hr class="sep">
+        <!-- faq content -->
+        <!-- for customer -->
+        <div class="container-fluid" id="faq-customer">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn text-left" data-toggle="collapse" data-target="#q1-c" aria-expanded="false">
+                    Q. What is the difference between Dine out and E-waiter? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q1-c" class="collapse">
+              <div class="card-body">
+                  <p> Dine-out lets you pre-book your meal and hence reserve a table at the restaurant. The order taking, food preparation and payment time is totally eliminated. Hence you save on time and hassles. E-waiter is used to book when you are in a restaurant, you just scan the QR code on your table and select all the items you want to order or call a waiter for any specific need. You can then make the payment or choose cash mode to pay at the counter later. </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  collapsed text-left" data-toggle="collapse" data-target="#q2-c" aria-expanded="false" aria-controls="q2-c">
+                  Q. Can I set the dining out time and date for the order? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q2-c" class="collapse">
+              <div class="card-body">
+                Yes, you can pre-book your meal for any time and day for up to one week.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  collapsed text-left" data-toggle="collapse" data-target="#q3-c" aria-expanded="false">
+                  Q. Can I scan table QR code with any QR scanner? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q3-c" class="collapse">
+              <div class="card-body">
+                No, you need to have iEat application installed on your device to enjoy contactless dining.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  collapsed text-left" data-toggle="collapse" data-target="#q4-c" aria-expanded="false" aria-controls="q4-c">
+                  Q. How will I know if my order is accepted and prepared by the restaurant? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q4-c" class="collapse">
+              <div class="card-body">
+                You will get a notification on iEat application when the restaurant accepts the order and you will have the order ready by the dine out time or time and date set by you if the order is for a future date.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  collapsed text-left" data-toggle="collapse" data-target="#q5-c" aria-expanded="false" aria-controls="q5-c">
+                  Q. I placed an order for a specific time, but I cannot reach the restaurant at the promised time due to some exigency, what next? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q5-c" class="collapse">
+              <div class="card-body">
+                You can inform the restaurant about your delay (up to 30 minutes) or you can also inform if you are expecting to reach before the chosen time to allow the restaurant to process the food accordingly. After 30 minutes of the chosen time, the order will be cancelled without any refund if you don't show up at the restaurant. Also, we cannot guarantee the order will be served warm if you exceed 15 minutes from your chosen time, it will be at the discretion of the restaurant. You can also request order cancellation with us, we will refund if the FOOD WAS NOT PREPARED.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  collapsed text-left" data-toggle="collapse" data-target="#q6-c" aria-expanded="false" aria-controls="q6-c">
+                  Q. What do I need to do when reaching the restaurant? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q6-c" class="collapse">
+              <div class="card-body">
+                You need to share the OTP at the counter and you will be made seated, The order will be on the table in just 1-2 minutes!
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  collapsed text-left" data-toggle="collapse" data-target="#q7-c" aria-expanded="false" aria-controls="q7-c">
+                  Q. Apart from Debit/Credit card/UPI/Netbanking, can I choose Cash as a payment method? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q7-c" class="collapse">
+              <div class="card-body">
+                 Yes, you can make payment by selecting ‘cash’ as a payment method, but in that case, food preparation will be done only after you arrive at the restaurant.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  collapsed text-left" data-toggle="collapse" data-target="#q8-c" aria-expanded="false" aria-controls="q8-c">
+                    Q. What are iPoints? What can I do with them? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q8-c" class="collapse">
+              <div class="card-body">
+                 iPoints are earned by you on every order you make or application referral by you to your friends and family, these points can be accommodated at the time of making payment, iPoints CANNOT be redeemed by selecting a cash payment option.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  collapsed text-left" data-toggle="collapse" data-target="#q9-c" aria-expanded="false" aria-controls="q9-c">
+                    Q. What if I place an order for Dine out and the restaurant rejected my order after making the payment? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q9-c" class="collapse">
+              <div class="card-body">
+                 In a normal course of time, the restaurant will never reject your order but in some circumstance for example if the dish you have chosen is not available the restaurant may reject the order or get in touch with you if some dishes are not available. In these cases you need not worry, full or partly cancelled orders are refunded to source in 2-3 working days.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  collapsed text-left" data-toggle="collapse" data-target="#q10-c" aria-expanded="false" aria-controls="q10-c">
+                    Q. How can I cancel or modify a pre-placed order? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q10-c" class="collapse">
+              <div class="card-body">
+                 You can cancel or modify your order if the order is not accepted by the restaurant (please be advised it will not take more than 1-3 minutes for the restaurant to accept the order) then you can cancel the order and amount will be refunded but if the restaurant has accepted the order and you still like to cancel, then please get in touch with us online, we can help. Please note that If the restaurant has already started preparing your order, we will not be able to modify or issue a refund upon cancellation.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  collapsed text-left" data-toggle="collapse" data-target="#q11-c" aria-expanded="false" aria-controls="q11-c">
+                    Q. Can I give special instruction on food preparation? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q11-c" class="collapse">
+              <div class="card-body">
+                 Yes, you can leave an instruction note if you have any food allergy or want to request something extra, we will pass it on to the restaurant.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  collapsed text-left" data-toggle="collapse" data-target="#q12-c" aria-expanded="false" aria-controls="q12-c">
+                    Q. I arrived at the restaurant at the right time but the food was not prepared/warm, or the table was not reserved, what can I do? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q12-c" class="collapse">
+              <div class="card-body">
+                 iEat acts as a service enabler between the customer and restaurant, we don’t interfere with the restaurant operations but you can always get in touch with us and we will sort out the issue for you also, in the end, you can always review the restaurant for the good/bad service. We assure you that we will take proper follow up of why the issue came up in the first place, with the restaurant to avoid such inconvenience in the future.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  collapsed text-left" data-toggle="collapse" data-target="#q13-c" aria-expanded="false" aria-controls="q13-c">
+                    Q. Can I place multiple orders at different restaurants for the same time? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q13-c" class="collapse">
+              <div class="card-body">
+                 Yes, you can, but somebody needs to be present at all the places to receive/consume the order on your behalf and you need to share the OTP with them. If the order is placed and nobody shows up after 30 minutes of the order serving promised time, the order will be cancelled with no refund.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  collapsed text-left" data-toggle="collapse" data-target="#q14-c" aria-expanded="false" aria-controls="q14-c">
+                    Q. What if I place the order from the E-waiter feature at the table and I also pay online but when the order was served, some dishes were missing? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q14-c" class="collapse">
+              <div class="card-body">
+                 In a normal course of time, the restaurant will have the only available item listed on the E-waiter menu. When you place an order, the order will be accepted at the backend only after making sure the items are in stock. If the order has been accepted but the item is not delivered to the table, you can request a refund for that item which will be refunded to source in the next 2-3 working days.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  collapsed text-left" data-toggle="collapse" data-target="#q15-c" aria-expanded="false" aria-controls="q15-c">
+                    Q. My favourite restaurant is not on iEat, is there anything I can do? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q15-c" class="collapse">
+              <div class="card-body">
+                 Yes, you can suggest us the restaurant by entering the details of the restaurant on 'suggest restaurant' feature. We keep track of most loved restaurants and get in touch with them immediately,  to help them serve you better through utilizing our platform.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  collapsed text-left" data-toggle="collapse" data-target="#q16-c" aria-expanded="false" aria-controls="q16-c">
+                    Q. Can I reserve tables for a large function? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q16-c" class="collapse">
+              <div class="card-body">
+                 You need to select the total number of guests arriving before placing the order and we will pass it on to the restaurant. They will make the arrangements accordingly.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  collapsed text-left" data-toggle="collapse" data-target="#q17-c" aria-expanded="false" aria-controls="q17-c">
+                    Q. How can I stay in the loop with iEat offerings and career opportunities? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q17-c" class="collapse">
+              <div class="card-body">
+                 We are active on these platforms, click on the icons and follow us.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  collapsed text-left" data-toggle="collapse" data-target="#q18-c" aria-expanded="false" aria-controls="q18-c">
+                    Q. How to contact iEat in case of any further queries not listed above? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q18-c" class="collapse">
+              <div class="card-body">
+                 You can always write to us at care@ieatfood.in. We will respond in 48 hours.
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- for restaurant -->
+        <div class="container-fluid faq-hide" id="faq-restaurant">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  text-left" data-toggle="collapse" data-target="#q1-r" aria-expanded="false" aria-controls="q1-r">
+                  Q. How will I manage orders on iEat? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q1-r" class="collapse">
+              <div class="card-body">
+                  You will get an admin panel to manage all orders and queries after partnering with us. The admin panel application can be installed on any Android powered device.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  text-left" data-toggle="collapse" data-target="#q2-r" aria-expanded="false" aria-controls="q2-r">
+                  Q. What are the associated charges to convert my restaurant into a smart restaurant by utilizing the power of iEat? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q2-r" class="collapse">
+              <div class="card-body">
+                  We work on very minimal commission rates and no hidden charges. To know more, register with us by clicking here. Please, allow us 48 hours to get back to you.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  text-left" data-toggle="collapse" data-target="#q3-r" aria-expanded="false" aria-controls="q3-r">
+                  Q. Do you provide training on how to use all the features? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q3-r" class="collapse">
+              <div class="card-body">
+                  Yes, after you partner with us. We will take you through a formal onboarding process followed by a short training program.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  text-left" data-toggle="collapse" data-target="#q4-r" aria-expanded="false" aria-controls="q4-r">
+                  Q. How do you ensure that the customer, after placing the order for dine out, actually arrives at the restaurant that too on the mentioned time? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q4-r" class="collapse">
+              <div class="card-body">
+                   We ask for full advance payment from the customer so you can prepare the food with a peace of mind. If the customer does not show up after 30 minutes of the expected arrival time, the order is cancelled and the customer is not eligible for refund i.e. you are not at a loss. Also, if the customer does not respond after 15 minutes of their expected arrival time, then the customer loses the right to claim warm/hot food. If the customer informs of their delay (up to 30 minutes) after their initial expected arrival time then the restaurant needs to coordinate.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  text-left" data-toggle="collapse" data-target="#q5-r" aria-expanded="false" aria-controls="q5-r">
+                  Q. Do I need a highly technical person to start accepting orders on iEat? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q5-r" class="collapse">
+              <div class="card-body">
+                  No, if you or your employees use a basic android smartphone, then everything can be managed properly.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  text-left" data-toggle="collapse" data-target="#q6-r" aria-expanded="false" aria-controls="q6-r">
+                  Q. How do I reach to iEat with a proposal? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q6-r" class="collapse">
+              <div class="card-body">
+                   Please get in touch with us by emailing us on care@ieatfood.in or register here. Please allow us 48 hours to get back to you.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <button class="btn  text-left" data-toggle="collapse" data-target="#q7-r" aria-expanded="false" aria-controls="q7-r">
+                  Q. How can I stay in the loop with iEat offerings and career opportunities? <i class="fas fa-plus"></i>
+                </button>
+              </h5>
+            </div>
+            <div id="q7-r" class="collapse">
+              <div class="card-body">
+                  We are active on these platforms. Please follow us by clicking on these icons.
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+{% endblock %}
+{% block page_script %}
+    <!-- Custom JS -->
+    <script type="text/javascript" src="{% static 'js/ieat/faq.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,587 @@
+
+.about {
+	background-color: rgb(248, 248, 248);
+	border: none;
+	box-shadow: none;
+	padding: 30px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.about .about-body {
+	text-align: center;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 0px;
+}
+.about .about-body h1 {
+	color: #d03114;
+	text-shadow: 0 2px 6px gray;
+	background-color: transparent;
+	border: none;
+	font-size: 40px;
+}
+.about .about-body p {
+	padding-top: 20px;
+	font-size: 18px;
+}
+.about .about-body span {
+	color: #d03114;
+}
+.about .sep, .working .sep, .benefits .sep {
+	margin-top: 10px;
+	padding: 1px;
+	background-color: #d03114;
+	width: 150px;
+}
+.working .sep, .benefits .sep {
+    margin-top: 0px;
+}
+.about .about-img div {
+	background-image: url("/static/images/about us.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	filter: drop-shadow(0px 0px 5px rgb(100, 100, 100));
+}
+.for-small {
+	display: none;
+}
+.for-small img {
+	width: 80%;
+	height: 80%;
+	padding: 50px;
+	padding-bottom: 5px;
+	filter: drop-shadow(0px 0px 5px rgb(60, 60, 60));
+}
+.step span {
+	color: #d03114;
+	width: 25px;
+	height: 25px;
+	background-color: #ffde59;
+	padding: 6px;
+	margin-right: 10px;
+	font-size: 15px;
+	border-radius: 20px;
+}
+.step {
+    z-index: 10;
+}
+.step-text {
+	border-left: 2px dashed #ffde59;
+	margin-bottom: -15px;
+	margin-left: -23px;
+	padding-left: 20px;
+	z-index: 8;
+}
+.working .e-waiter li:last-child .step-text, .working .dine-out li:last-child .step-text {
+    margin-bottom: 8px;
+}
+.working {
+	border: none;
+	padding: 20px;
+	margin-left: 80px;
+	margin-right: 80px;
+	padding-top: 50px;
+}
+.benefits {
+    border: none;
+    box-shadow: none;
+	padding: 20px;
+	padding-left: 0px;
+	padding-right: 0px;
+    padding-top: 35px;
+	position: relative;
+	background-color: rgb(248, 248, 248);
+}
+.benefits .menu {
+    padding-top: 40px;
+}
+.benefits .menu div {
+    float: none;
+    margin: 0 auto;
+}
+.benefits .nav-link {
+    color: rgb(12, 32, 42);
+}
+.benefits .nav-item .active {
+    background-color: #d03114;
+}
+.benefits .nav-item:hover {
+    background-color: transparent;
+    color: #d03114;
+    cursor: pointer;
+}
+.benefits .h-bar {
+    background-color: black;
+    padding-bottom: 0.2px;
+    width: 300px;
+}
+.working h1, .benefits h1 {
+	color: #d03114;
+	text-shadow: 0 2px 6px gray;
+	text-align: center;
+	border: none;
+	box-shadow: none;
+	background-color: transparent;
+	font-size: 40px;
+}
+.working h6 span {
+    color: #ffde59;
+    font-weight: bold;
+}
+.working .e-waiter, .working .dine-out {
+    margin-top: 80px;
+}
+.working .card-body li {
+    border: none;
+}
+.working .list-group-item, .benefits .list-group-item {
+	background-color: transparent;
+	color: #d03114;
+	position: relative;
+}
+.working .card{
+	box-shadow: 0px 0px 5px silver;
+}
+.working .dine-out {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.working .e-waiter {
+    margin-right: 20px;
+    margin-left: 10px;
+}
+.working .e-waiter img, .working .dine-out img {
+    width: 250px;
+    height: 150px;
+    filter: drop-shadow(0px 0px 5px rgb(60, 60, 60));
+}
+.working .e-waiter h5, .working .dine-out h5 {
+    color: #d03114;
+    border: none;
+    margin-top: 10px;
+    background-color: transparent;
+}
+.working .e-waiter .card-img-top p, .working .dine-out .card-img-top p {
+    font-size: 28px;
+    text-shadow: 2px 0.5px 2px silver;
+    font-weight: bold;
+    margin-bottom: -10px;
+    font-family: "barlow condensed bold";
+}
+.benefits .card-group {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.benefits .card {
+    margin: 0px;
+    padding: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    border: none;
+    background-color: transparent;
+}
+.benefits .card-title {
+    background-color: #ffde59;
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(42, 52, 62);
+    font-size: 22px;
+}
+.benefits .card-text {
+    color: rgb(72, 82, 102);
+}
+.benefits .card-img-top i {
+    font-size: 120px;
+    color: #d03114;
+    padding: 15px;
+}
+.benefits .card-img-top img {
+    width: 150px;
+    height: 150px;
+}
+.benefits-dining img {
+    width: 130px;
+    height: 130px;
+}
+.benefits .info {
+	text-indent: 50px;
+}
+.hide {
+    display: none;
+}
+
+.member {
+    padding: 40px;
+}
+.member img {
+    width: 100%;
+}
+.section-tag {
+    color: #d03114;
+    font-size: 25px;
+    margin-bottom: -20px;
+}
+.fa-circle {
+	font-size: 10px;
+}
+.one-half {
+	color: #d03114;
+}
+.sec-half {
+	color: orange;
+}
+.register-tag {
+    padding-top: 30px;
+    margin-top: -60px;
+}
+.register-tag button p {
+    display: inline;
+    padding-left: 20px;
+    font-size: 22px;
+}
+.register-tag button {
+    background-image: linear-gradient(to left, #f03114, #ffde59, #d03114);
+    background-size: 200%;
+    border: 1px solid #556699;
+    border-radius: 5px;
+    padding: 16px 33px;
+    color: black;
+    display: inline-block;
+    font: normal bold 23px/1 "arial";
+    text-align: center;
+    position: relative;
+}
+.register-tag button:hover {
+    border: 2px solid #d03114;
+    cursor: pointer;
+}
+.ribbon {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    background: transparent;
+    border: none;
+    overflow: hidden;
+}
+.ribbon span {
+    width: 130px;
+    padding: 5px 0px;
+    background: lightgreen;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: -45px;
+    transform: rotate(-45deg);
+    text-align: center;
+    color: rgb(32, 42, 62);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    padding-left: 5px;
+}
+.ribbon:after {
+    content: '';
+    border: 5px solid transparent;
+    position: absolute;
+}
+.ribbon:before {
+    bottom: 0;
+    right: 0;
+}
+.ribbon:after {
+    top: 0;
+    left: 0;
+}
+.register-tag button .badge {
+    font-size: 11px;
+    top: 80%;
+    left: 75%;
+    position: absolute;
+}
+/* for medium screen */
+@media only screen and (max-width: 1200px){
+	.about {
+		padding: 25px;
+	}
+	.about .about-body {
+        padding-left: 30px;
+        padding-right: 30px;
+	}
+	.about .about-body h1, .working h1, .benefits h1 {
+		font-size: 28px;
+	}
+	.about .about-body p {
+		font-size: 14px;
+	}
+	.working .e-waiter .card-img-top p, .working .dine-out .card-img-top p  {
+        font-size: 24px;
+    }
+    .working {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .step span {
+        width: 20px;
+        height: 20px;
+        font-size: 12.5px;
+    }
+    .step-text {
+        font-size: 14px;
+    }
+    .benefits .card-title {
+        font-size: 16.5px;
+    }
+    .benefits .card-img-top img {
+        width: 120px;
+        height: 120px;
+    }
+    .benefits .card-img-top i {
+        font-size: 90px;
+    }
+    .benefits .card {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .step-text {
+        margin-left: -21px;
+    }
+}
+/* for small screen */
+@media only screen and (max-width: 900px){
+	.about .about-body h1, .working h1, .benefits h1 {
+		font-size: 25px;
+	}
+	.working .card {
+	    margin-top: 60px;
+	}
+	.working .dine-out {
+	    margin-left: 5px;
+	}
+	.working .e-waiter {
+	    margin-right: 5px;
+	}
+    .step-text {
+        font-size: 13.5px;
+    }
+    .working .section-tag {
+        font-size: 18px;
+    }
+}
+
+/* for mobile screen */
+@media only screen and (max-width: 767px) {
+	.about {
+		padding: 20px;
+		padding-top: 0px;
+	}
+	.about .about-body {
+	    margin-top: 40px;
+	}
+	.about .about-body h1, .working h1, .working h1 {
+		font-size: 30px;
+	}
+	.working h6, .working h6 span {
+	    font-size: 22px !important;
+	}
+	.about .about-body p {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.benefits .card-group {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+	.for-small {
+		display: block;
+	}
+	.for-small img {
+		width: 90%;
+		height: 90%;
+		padding: 40px;
+		padding-top: 70px;
+		padding-bottom: 0px;
+	}
+    .benefits .h-bar {
+        width: 260px;
+    }
+}
+
+/* for extra small screen */
+@media only screen and (max-width: 575px){
+	.register-tag button p {
+		font-size: 18px;
+	}
+	.about {
+	    padding-bottom: 0px;
+	}
+	.about .about-body h1, .working h1, .benefits h1 {
+		margin-top: 0px;
+		font-size: 25px;
+	}
+	.about .about-body p {
+		padding: 0px;
+		padding-top: 10px;
+	}
+	.working {
+	    margin-top: 0px;
+	    padding-top: 30px;
+	}
+	.working .card {
+	    margin-left: -15px;
+	    margin-right: -15px;
+	}
+	.working .sep {
+	    margin-bottom: 0px;
+	}
+	.working h6, .working h6 span {
+	    font-size: 18px !important;
+	}
+	.working img {
+	    width: 80%;
+	    height: 80%;
+	}
+	.working .card-body {
+	    padding-left: 0px;
+	    padding-right: 0px;
+	    margin-left: 0px;
+	    margin-right: 0px;
+	}
+	.member {
+	    padding: 0px;
+	}
+	.member img {
+	    margin-top: 0px;
+	    margin-bottom: 20px;
+	}
+	.benefits .card {
+	    padding-bottom: 0px;
+	    margin: 0px;
+	}
+    .benefits .card-img-top img {
+        width: 100px;
+        height: 100px;
+    }
+    .benefits .card-img-top i {
+        font-size: 70px;
+    }
+    .benefits .card-title {
+        font-size: 13px;
+    }
+    .benefits .card-text {
+        font-size: 11.5px;
+    }
+    .benefits .h-bar {
+        width: 240px;
+    }
+}
+
+/* for extra extra small screen */
+@media only screen and (max-width: 488px){
+	.about .about-body {
+	    margin-top: 0px;
+	    padding: 30px;
+	    padding-bottom: 0px;
+	}
+	.about .about-body h1 {
+		margin-top: 0px;
+	}
+	.about .about-body p {
+	    font-size: 12px;
+	}
+	.working .card-body {
+	    padding-left: 0px;
+	    padding-right: 0px;
+	    margin-left: -5px;
+	    margin-right: -5px;
+	}
+	.for-small img {
+		padding: 20px;
+		padding-bottom: 0px;
+		margin-left: 10px;
+	}
+    .benefits .card-img-top img {
+        width: 90px;
+        height: 90px;
+    }
+    .benefits .card-img-top i {
+        font-size: 60px;
+    }
+    .benefits .card-title {
+        font-size: 13px;
+    }
+    .benefits .card-text {
+        font-size: 11.5px;
+    }
+    .benefits .h-bar {
+        width: 230px;
+    }
+}
+
+/* for ultra small screen */
+@media only screen and (max-width: 360px){
+	.register-tag button p {
+		font-size: 15px;
+	}
+	.about .about-body {
+	    margin-top: 0px;
+	    padding: 25px;
+	}
+	.about .about-body h1, .working h1, .benefits h1 {
+		margin-top: 0px;
+		font-size: 20px;
+	}
+	.working h6, .working h6 span {
+	    font-size: 16.5px !important;
+	}
+	.working img {
+	    max-width: 90%;
+	    max-height: 90%;
+	}
+	.working .card-body {
+	    padding-left: 0px;
+	    padding-right: 0px;
+	    margin-left: 0px;
+	    margin-right: 0px;
+	}
+	.member {
+	    padding: 0px;
+	}
+	.member img {
+	    margin-top: 0px;
+	    margin-bottom: 20px;
+	}
+    .benefits .card-img-top img {
+        width: 80px;
+        height: 80px;
+    }
+    .benefits .card-img-top i {
+        font-size: 50px;
+    }
+    .benefits .card-title {
+        font-size: 12px;
+    }
+    .benefits .card-text {
+        font-size: 10px;
+    }
+}
+
+/* for tiny screen */
+@media only screen and (max-width: 290px){
+	.about .about-body {
+	    margin-top: 0px;
+	    padding: 20px;
+	}
+	.about .about-body h1 {
+		margin-top: 0px;
+		font-size: 15px;
+	}
+	.about .about-body p {
+	    font-size: 10.5px;
+	}
+}

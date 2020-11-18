@@ -1,0 +1,292 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_css %}
+    <!-- Custome CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ieat/index.css' %}">
+{% endblock %}
+{% block page_content %}
+    <!-- About Us (What do we do for you) -->
+    <div class="container-fluid about">
+         <!--show on small devices only-->
+        <div class="row for-small">
+            <div class="d-flex justify-content-center align-items-center-center">
+                <img src="{% static 'images/about us.png' %}" alt="what we do">
+            </div>
+        </div>
+         <!--for devices above small-->
+         <div class="row no-gutters">
+            <div class="col-md-7 about-body">
+                <h1> WHAT DO WE DO FOR YOU? </h1>
+                <hr class="sep">
+                <p>
+                    iEat empowers you to <span>save about 30 minutes</span> by placing an order for the food online while travelling to the restaurant or before even leaving the <span>comfort of your home</span>. <br><br>
+                    On a mission to give you an <span>unmatched food ordering experience</span> from the restaurant's <span>dining table</span>, anywhere in Srinagar without making those awkward signs to get <span>waiters attention</span> for order or any request.<br><br>
+                    With iEat, enjoy <span>contactless, wait-less</span> dining and <span>bid goodbye</span> to those unhygienic menu cards.
+                </p>
+            </div>
+            <div class="col-md-5 about-img">
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <!-- Working (How does it works) -->
+    <div class="card working">
+        <div>
+            <h1 class="card-header"> HOW DOES IT WORK? </h1>
+            <hr class="sep">
+        </div>
+        <br>
+        <h6 class="container-fluid text-center section-tag"> 6 <span> Easy</span> Steps </h6>
+        <div class="row no-gutters">
+            <div class="col-md-6">
+                <div class="card dine-out">
+                    <div class="card-img-top text-center">
+                        <img src="{% static 'images/dine out.png'%}"/>
+                        <h5 class="card-header"><p><span style="color:#d03114;">DINE</span> <span style="color:#ffde59;">OUT</span></p></h5>
+                    </div>
+                    <div class="card-body">                        
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex align-items-bottom">
+                                <div class="step"> <span class="badge"> 1 </span> </div>
+                                <div class="step-text"> <span style="font-weight: bold;"> Navigate to iEat </span> mobile application or website and click on Dine out. </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-bottom">
+                                <div class="step"><span class="badge"> 2 </span> </div>
+                                <div class="step-text"> <span style="font-weight: bold;"> Select the best restaurant </span> nearby or perform a search for your favourite restaurant.</div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-bottom">
+                                <div class="step"> <span class="badge"> 3 </span> </div>
+                                <div class="step-text"> <span style="font-weight: bold;"> View deals and menu </span>, select items to order and enter your arrival time. </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-bottom">
+                                <div class="step"><span class="badge"> 4 </span></div>
+                                <div class="step-text"> <span style="font-weight: bold;"> Select payment option </span> to place the order.  </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-bottom">
+                                <div class="step"><span class="badge"> 5 </span> </div>
+                                <div class="step-text"> <span style="font-weight: bold;"> Head towards the restaurant </span> on your predefined arrival time. </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-bottom">
+                                <div class="step"> <span class="badge"> 6 </span> </div>
+                                <div class="step-text"> <span style="font-weight: bold;"> Get served </span> under 150 seconds!  </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card e-waiter">
+                    <div class="card-img-top text-center">
+                        <img src="{% static 'images/e-waiter.png'%}"/>
+                        <h5 class="card-header"><p><span style="color:#d03114;">E-</span><span style="color:#ffde59;">WAITER</span></p></h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex align-items-bottom">
+                                <div class="step"> <span class="badge"> 1 </span> </div>
+                                <div class="step-text"> <span style="font-weight: bold;"> Make your way </span> to your favourite restaurant and be seated. </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-bottom">
+                                <div class="step"> <span class="badge"> 2 </span> </div>
+                                <div class="step-text"> <span style="font-weight: bold;"> Navigate to iEat </span> application or website and click on E-waiter. </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-bottom">
+                                <div class="step"> <span class="badge"> 3 </span> </div>
+                                <div class="step-text"> <span style="font-weight: bold;"> Scan </span> the table QR code. </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-bottom">
+                                <div class="step"> <span class="badge"> 4 </span> </div>
+                                <div class="step-text"> <span style="font-weight: bold;"> Select items </span> to order from menu OR request extras (water, tissue paper, spoons/plates etc.). </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-bottom">
+                                <div class="step"> <span class="badge"> 5 </span> </div>
+                                <div class="step-text"> <span style="font-weight: bold;"> Select payment option </span> to place the order. </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-bottom">
+                                <div class="step"> <span class="badge"> 6 </span> </div>
+                                <div class="step-text"> <span style="font-weight: bold;"> Get served </span> as soon as the Kitchen accepts and processes the order. </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="container register-tag text-center">
+        <button class="animated infinite pulse" type="button">
+            <div class="ribbon"> <span> Free </span></div>
+            <p> BECOME AN EARLY MEMBER! </p>
+            <br><span class="badge badge-danger"> Limited Slots </span>
+        </button>
+    </div><br><br>
+    <div class="container-fluid benefits">
+        <div>
+            <h1 class="benefits-header"> 6 MOST POWERFUL BENEFITS </h1>
+            <hr class="sep">
+        </div>
+        <div class="menu row mx-auto">
+            <div>
+                <ul class="nav nav-pills card-header-pills">
+                    <li class="nav-item">
+                        <a class="nav-link active"> For Customers </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"> For Restaurants </a>
+                    </li>
+                </ul>
+            </div>
+        </div><hr class="h-bar"><br>
+        <div class="card-group row no-gutters" id="for-customer">
+            <div class="col-md-4 col-6">
+                <div class="card benefits-time">
+                    <div class="card-img-top text-center"><img src="{% static 'images/benefits/save time.png'%}"/><!--<i class="fas fa-clock" aria-hidden="true">--></div>
+                    <div class="card-body">
+                        <h4 class="card-title text-center"> Save about 30 minutes </h4>
+                        <p class="card-text">
+                            on dine out by eliminating ordering ques, food preparation time and payment time.
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-6">
+                <div class="card benefits-bill">
+                    <div class="card-img-top text-center"><i class="fas fa-receipt" aria-hidden="true"></i></div>
+                    <div class="card-body">
+                        <h4 class="card-title text-center"> No more bill surprises </h4>
+                        <p class="card-text">
+                            when you have menu in your smartphone before even stepping in the restaurant.<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-6">
+                <div class="card benefits-dining">
+                    <div class="card-img-top text-center"><i class="fas fa-hands-wash" aria-hidden="true"></i></div>
+                    <div class="card-body">
+                        <h4 class="card-title text-center"> Contactless dining </h4>
+                        <p class="card-text">
+                            experience for healthy and hygienic post COVID lifestyle.<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-6">
+                <div class="card benefits-deals">
+                    <div class="card-img-top text-center"><i class="fas fa-gifts" aria-hidden="true"></i></div>
+                    <div class="card-body">
+                        <h4 class="card-title text-center"> Best deals </h4>
+                        <p class="card-text">
+                            across restaurants in Srinagar, earn iPoints on every order. <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-6">
+                <div class="card benefits-less">
+                    <div class="card-img-top text-center"><img src="{% static 'images/benefits/spend less time.png'%}"/></div>
+                    <div class="card-body">
+                        <h4 class="card-title text-center"> Digital menu </h4>
+                        <p class="card-text">
+                            enables you to spend more time enjoying the food, less time searching for the restaurants and menu.<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-6">
+                <div class="card benefits-convenient">
+                    <div class="card-img-top text-center"><img src="{% static 'images/benefits/e-waiter srinagar.png'%}"/></div>
+                    <div class="card-body">
+                        <h4 class="card-title text-center"> Convenient and fast </h4>
+                        <p class="card-text">                            
+                            ordering experience from restaurant table using E-waiter feature.<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-group row no-gutters hide" id="for-restaurant">
+            <div class="col-md-4 col-6">
+                <div class="card benefits-transit">
+                    <div class="card-img-top text-center"><img src="{% static 'images/restaurant/smart transit.png'%}"/></div>
+                    <div class="card-body">
+                        <h4 class="card-title text-center"> Smart transit </h4>
+                        <p class="card-text">
+                            from conventional restaurant to a smart restaurant for an exceptional customer experience that beat the competition.
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-6">
+                <div class="card benefits-steroids">
+                    <div class="card-img-top text-center"><img src="{% static 'images/restaurant/Sales on steriod.png'%}"/></div>
+                    <div class="card-body">
+                        <h4 class="card-title text-center"> Increase sales </h4>
+                        <p class="card-text">
+                            by increasing brand visibility organically using 4 different touch points for the customer to engage with your brand.<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-6">
+                <div class="card benefits-tech">
+                    <div class="card-img-top text-center"><img src="{% static 'images/restaurant/Robust technology.png'%}"/></div>
+                    <div class="card-body">
+                        <h4 class="card-title text-center"> Robust technology </h4>
+                        <p class="card-text">
+                            that save upto 50% on waiter salaries and betters your brand reputation by using Restaurant List Price (RLP) across services.<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-6">
+                <div class="card benefits-solution">
+                    <div class="card-img-top text-center"><img src="{% static 'images/restaurant/All in one solution.png'%}"/></div>
+                    <div class="card-body">
+                        <h4 class="card-title text-center"> All-in one solution </h4>
+                        <p class="card-text">
+                            to meet post COVID customer behaviour of contactless dining and maximum convenience. <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-6">
+                <div class="card benefits-turnover">
+                    <div class="card-img-top text-center"><img src="{% static 'images/restaurant/Reduced table turnover.png'%}"/></div>
+                    <div class="card-body">
+                        <h4 class="card-title text-center"> Reduced table turnover time </h4>
+                        <p class="card-text">
+                            for effective customer management, enhanced customer satisfaction and increased sales.<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-6">
+                <div class="card benefits-commission">
+                    <div class="card-img-top text-center"><img src="{% static 'images/restaurant/Minimal commission.png'%}"/></div>
+                    <div class="card-body">
+                        <h4 class="card-title text-center"> Transparent and lowest </h4>
+                        <p class="card-text">
+                            service fee globally, no monthly payments and no hidden charges.<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="container register-tag text-center">
+            <button class="animated infinite pulse" type="button">
+                <div class="ribbon"> <span> Free </span></div>
+                <p> BECOME AN EARLY MEMBER! </p>
+                <br><span class="badge badge-danger"> Limited Slots </span>
+            </button>
+        </div>
+        <br><br>
+    </div>
+{% endblock %}
+{% block page_script %}
+    <!-- Custom JS -->
+    <script type="text/javascript" src="{% static 'js/ieat/index.js' %}"></script>
+{% endblock %}

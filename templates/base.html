@@ -1,0 +1,334 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bootstrap Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}"/>
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="{% static 'css/helpers/animate.min.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/helpers/hamburgers.min.css'%}"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'css/fontawesome/css/all.css' %}">
+    <!-- Custome CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ieat/base.css' %}">
+    {% block page_css %}
+    {% endblock %}
+    <link rel="icon" type="image" href="{% static 'images/logo/ieat.png' %}" width="35" height="20">
+    <title> iEat </title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQREPNJPGE"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XQREPNJPGE');
+    </script>
+</head>
+<body>
+    <!-- Page Cover -->
+    <div class="container-fluid cover">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-sm fixed-top" id="trans">
+            <!-- App Icon -->
+            <div class="navbar-header ieat-brand">
+                <a class="navbar-brand" href="{% url 'index'%}"> <img class="ieat-logo" src="{% static 'images/logo/ieat.png' %}" alt="ieat food srinagar"/> </a>
+            </div>
+            <!-- Mobile View Button -->
+            <button class="navbar-toggler ieat-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapseTarget" aria-controls="navbarCollapseTarget" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <!-- Navigation Items -->
+            <div class="collapse navbar-collapse" id="navbarCollapseTarget">
+                <ul class="navbar-nav ml-auto ieat-items">
+                    <li class="nav-item dropdown benefits-nav-item">
+                        <a class="nav-link dropdown-toggle" id="benefits_dd" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">BENEFITS</a>
+                        <div class="dropdown-menu" aria-labelledby="benefits_dd">
+                            <a class="dropdown-item customer-benefits">For Customers</a>
+                             <a class="dropdown-item restaurant-benefits">For Restaurants</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="register_dd" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">REGISTER</a>
+                        <div class="dropdown-menu" aria-labelledby="register_dd" aria-expanded="false">
+                             <a class="dropdown-item register-customer">As Customer</a>
+                             <a class="dropdown-item register-restaurant">As Restaurant</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'faq'%}" id="faq_dd" role="button">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Social Bar -->
+        <div class="icon-bar">
+            <a href="https://instagram.com/tryieat"><img class="social-media" src="{% static 'images/social media logos/png/instagram.png' %}"></a>
+            <a href="https://facebook.com/tryieat"><img class="social-media" src="{% static 'images/social media logos/png/facebook.png' %}"></a>
+            <a href="https://linkedin.com/company/tryieat"><img class="social-media" src="{% static 'images/social media logos/png/linkedin.png' %}"></a>
+            <a href="https://twitter.com/tryieat_"><img class="social-media" src="{% static 'images/social media logos/png/twitter.png' %}"></a>
+        </div>
+        <!-- Tagline -->
+        <div class="tagline">
+            <div class="tagline-title"><span>Introducing</span></div>
+            <div class="tagline-body">
+                eatery experience like never before in Srinagar!<br><br>
+                ..because we couldn’t see you waiting and craving for your favourite food at the restaurant
+                <br><br>
+                <img class="tagline-wait" src="{% static 'images/carving.gif' %}"><br>
+                <span class="tagline-ieat"> iEat</span>, re-engineered for smart foodies like you.<br>
+                <span class="tagline-hashtag"> #Nomorewait </span>&nbsp;
+                <span class="tagline-hashtag"> #ContactlessDining </span>
+            </div>
+        </div>
+        <!-- Scroll Button -->
+        <button class="page-scroller"> <i class="fa fa-chevron-down"></i> </button>
+    </div>
+    <!-- Customer Register Modal -->
+    <div class="modal animated flipInY" id="customer-modal" tabindex="-1" role="dialog" aria-labelledby="customer-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resgiter-modal-label"> <span> Register to </span> <img src="{% static 'images/logo/ieat.png'%}"> </h5>
+                    <button type="button" class="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="customer-form"> {% csrf_token %}
+                    <div class="modal-body">
+                        <div class="alert alert-warning" role="alert">
+                            <h6 class="alert-heading"> Did you know? </h6>
+                            <hr class="alert-sep">
+                            <p> You have caught us early <i class="fas fa-grin-alt"></i> <br>
+                                iEat is being cooked, and we are working hard to make it a great recipe.<br>
+                                Register for early member benefits!
+                            </p>
+                        </div>
+                        <h6 class="modal-type mx-auto"> <span>Register as Customer</span> </h6>
+                        <hr>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input id="c-name" type="text" class="form-control form-control-sm" placeholder="Name">
+                                        <span id="c-err-name"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input id="c-phone" type="number" class="form-control form-control-sm" placeholder="Phone">
+                                        <span id="c-err-phone"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input id="c-email" type="email" class="form-control form-control-sm" placeholder="Email">
+                                        <span id="c-err-email"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input id="c-occupation" type="text" class="form-control form-control-sm" placeholder="Occupation">
+                                        <span id="c-err-occupation"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row heard-from justify-content-center">
+                                <div>
+                                    <p>Where did you hear about us?</p>
+                                    <span id="c-err-heard"></span>   
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Choose
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item">Friends</a>
+                                        <a class="dropdown-item">Instagram</a>
+                                        <a class="dropdown-item">Facebook</a>
+                                        <a class="dropdown-item">Google</a>
+                                        <a class="dropdown-item">Others</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="modal-footer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-8">                                    
+                                    <button type="button" class="mx-auto modal-swapper"><a> Click here to register your <strong>Restaurant</strong> </a> </button>
+                                </div>
+                                <div class="col text-right">
+                                    <i class="fas fa-circle-notch fa-spin"></i>
+                                    <button type="submit" class="btn"> Submit </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Restaurant Register Modal -->
+    <div class="modal animated flipInY" id="restaurant-modal" tabindex="-1" role="dialog" aria-labelledby="restaurant-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="restaurant-modal-label"> <span> Register to </span> <img src="{% static 'images/logo/ieat.png'%}"> </h5>
+                    <button type="button" class="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="restaurant-form"> {% csrf_token %}
+                    <div class="modal-body">
+                        <div class="alert alert-warning" role="alert">
+                            <h6 class="alert-heading"> Did you know? </h6>
+                            <hr class="alert-sep">
+                            <p> You have caught us early <i class="fas fa-grin-alt"></i> <br>
+                                iEat is being cooked, and we are working hard to make it a great recipe.<br>
+                                Register for early member benefits!
+                            </p>
+                        </div>
+                        <h6 class="modal-type mx-auto"> <span>Register your Restaurant</span> </h6><hr>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input id="r-name" type="text" class="form-control form-control-sm" placeholder="Restaurant name">
+                                        <span id="r-err-name"></span>  
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input id="r-phone" type="number" class="form-control form-control-sm" placeholder="Contact number">
+                                        <span id="r-err-phone"></span>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input id="r-email" type="email" class="form-control form-control-sm" placeholder="Email">
+                                        <span id="r-err-email"></span>  
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input id="r-address" type="text" class="form-control form-control-sm" placeholder="Address">
+                                        <span id="r-err-address"></span>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row heard-from justify-content-center">
+                                <div>
+                                    <p>Where did you hear about us?</p>
+                                    <span id="r-err-heard"></span>   
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Choose
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item">Friends</a>
+                                        <a class="dropdown-item">Instagram</a>
+                                        <a class="dropdown-item">Facebook</a>
+                                        <a class="dropdown-item">Google</a>
+                                        <a class="dropdown-item">Others</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="modal-footer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-8">                                    
+                                    <button type="button" class="mx-auto modal-swapper"><a> Click here to register as <strong>Customer</strong> </a> </button>
+                                </div>
+                                <div class="col text-right">
+                                    <i class="fas fa-circle-notch fa-spin"></i>
+                                    <button type="submit" class="btn"> Submit </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Register Message -->
+    <div class="alert alert-success alert-dismissible fade show container-fluid notification">
+        <div class="closeBtn"><button class="close">&nbsp; x</button></div>
+        <div class="msg"><strong>Thanks for your time.</strong><hr><strong>Please follow us on social media to stay in loop.</strong></div>
+    </div>
+    {% block page_content %}
+    {% endblock %}
+    <footer class="ieat-footer">
+        <div class="container footer-top">
+            <div class="row no-gutters">
+                <div class="col-4">
+                    <div class="title">
+                        <h5> Address </h5>
+                    </div>
+                    <div class="body">
+                        <p>
+                            Naikbagh, Srinagar,<br>
+                            J&K, 190015
+                        </p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="title">
+                        <h5> Get In Touch </h5>
+                    </div>
+                    <div class="body">
+                        <p>
+                            care@ieatfood.in <br>
+                            +91 9469465558
+                        </p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="title">
+                        <h5> We are social! </h5>
+                    </div>
+                    <div class="body">
+                        <p>
+                            <a href="https://www.instagram.com/tryieat"> <img class="social-media" src="{% static 'images/social media logos/png/instagram.png' %}"></a>
+                            <a href="https://www.facebook.com/tryieat"> <img class="social-media" src="{% static 'images/social media logos/png/facebook.png' %}"></a>
+                            <a href="https://www.linkedin.com/company/tryieat"> <img class="social-media" src="{% static 'images/social media logos/png/linkedin.png' %}"></a>
+                            <a href="https://www.twitter.com/tryieat_"> <img class="social-media" src="{% static 'images/social media logos/png/twitter.png' %}"></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid no-gutters footer-bottom">
+            <div class="row">
+                <div class="col-6 no-gutters">
+                    <h6> Copyright 2020 <i class="far fa-copyright"></i> all rights reserved.</h6>
+                </div>
+                <div class="col-6 text-right">
+                    <h6> Photo credits: Freepik, Canva.</h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Bootstrap JS -->
+    <script type="text/javascript" src="{% static 'js/jQuery/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/popper.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js'%}"></script>
+    <!-- Custom JS -->
+    <script type="text/javascript" src="{% static 'js/ieat/base.js' %}"></script>
+    {% block page_script %}
+    {% endblock %}
+</body>
+</html>

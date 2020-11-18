@@ -1,0 +1,80 @@
+.faq-content {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+.faq-nav {
+    padding: 20px;
+    padding-bottom: 0px;
+}
+.faq-nav .nav-item .active {
+     background-color: #d03114;
+}
+.faq-nav .nav-link {
+     color: rgb(32, 42, 62);
+     cursor: pointer;
+}
+.faq-content .sep {
+    width: 50%;
+}
+#faq-customer, #faq-restaurant {
+    margin-top: 40px;
+}
+#faq-customer button, #faq-restaurant button {
+    padding: 0;
+    padding-right: 20px;
+    color: rgb(62, 72, 92);
+}
+#faq-customer .btn:focus, #faq-restaurant .btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+#faq-customer .card-header, #faq-restaurant .card-header {
+    border: 1px solid silver;
+}
+#faq-customer .card-header button, #faq-restaurant .card-header button {
+    /*text-align: left!;*/
+}
+.faq-hide {
+    display: none;
+}
+.faq-content h5 {
+    position: relative;
+}
+.faq-content .card-header i {
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    float:right;
+    right:0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@media only screen and (max-width: 900px){
+    .faq-content {
+        padding-left: 20px;
+        font-size: 14px;
+    }
+    #faq-customer button, #faq-restaurant button {
+        font-size: 14px;
+    }
+    .faq-content .card-header i {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 575px){
+    #faq-customer h5, #faq-restaurant h5 {
+        margin-left: -10px;
+    }
+    .faq-content .card-header i {
+        font-size: 12px;
+    }
+    .faq-content .card-header i {
+        left: 100%;
+    }
+    .faq-content .card-body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
