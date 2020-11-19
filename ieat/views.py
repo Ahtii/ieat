@@ -9,6 +9,7 @@ from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.utils.html import strip_tags
 from ieat import settings
+from django.views.decorators.csrf import csrf_exempt
 
 sheet = settings.base.CLIENT.open(settings.base.SHEET_NAME).sheet1
 
@@ -18,6 +19,7 @@ def index(request):
 def faq(request):
 	return render(request, "faq.html")
 
+@csrf_exempt
 def register_customer(request):	
 	data = {
 		'name': request.POST.get("name").lower(),
@@ -30,8 +32,14 @@ def register_customer(request):
 		data.update({"email": email.lower()})
 	response = {}	
 	try:		
+		print("inside try")
+		print(data['name'])
 		db_customer = Customer.objects.filter(phone=data["phone"]).first()				
-		if db_customer is None:				
+		print("created customer")
+		print(db_customer)
+		if db_customer is None:	
+			print("adding data to customers...")
+			print(db_customer)			
 			customer = Customer(**data)						
 			customer.save()					
 			formatted_date = customer.submit_date.strftime("%b %d %Y")
@@ -47,6 +55,7 @@ def register_customer(request):
 				], 
 				table_range='A:F'
 			)
+			print("everything worked fine")						
 		else:
 			response = {"error": "Phone already registered.", "type": "existing"}
 	except:
@@ -55,6 +64,7 @@ def register_customer(request):
 	print(response)	
 	return JsonResponse(response)
 
+@csrf_exempt
 def register_restaurant(request):
 	data = {
 		'name': request.POST.get("name").lower(),

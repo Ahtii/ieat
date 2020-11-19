@@ -26,27 +26,23 @@ function adjust_nav(){
 
 var validators = {
     isValidName: function(name){
-        let pattern = new RegExp(/^([a-z]+(\s[a-z]+)*){3,30}$/i);
+        let pattern = new RegExp(/^([a-z\sa-z]){3,50}$/i);
         return pattern.test(name);
     },
     isValidPhone: function(phone){
         let pattern = new RegExp(/^[0-9]{10}$/i);
         return pattern.test(phone);
     },
-    isValidEmail: function(email){
-        let pattern = new RegExp(/^[\w.%+-]+@[a-z0-9]+(\.[a-z]{2,}){1,2}$/i);
-        return pattern.test(email);
-    },
     isValidOccupation: function(occupation){
         let pattern = new RegExp(/^([a-z]+(\s[a-z]+)*){2,30}$/i);
         return pattern.test(occupation);
     },
     isValidRestaurantName: function(name){
-        let pattern = new RegExp(/^([a-z]+(\s[a-z0-9]+)*){2,30}$/i);
+        let pattern = new RegExp(/^([a-z]+(\s[a-z0-9]+)*){2,50}$/i);
         return pattern.test(name);
     },
     isValidAddress: function(address){
-        let pattern = new RegExp(/^[a-z0-9\s,]{6,50}$/i);
+        let pattern = new RegExp(/^([a-z0-9][\s,\-a-z0-9]){6,150}$/i);
         return pattern.test(address);
     }
 }
@@ -61,11 +57,6 @@ function validate_customer_form(input, value){
         $("#c-err-phone").text("");
         if (!validators.isValidPhone(value))
             $("#c-err-phone").text("Only 10 digits are allowed.");
-    }
-    else if (input == "c-email"){
-        $("#c-err-email").text("");
-        if (!validators.isValidEmail(value))
-            $("#c-err-email").text("Invalid email format.");
     }
     else {
         $("#c-err-occupation").text("");
@@ -90,11 +81,6 @@ function validate_restaurant_form(input, value){
         $("#r-err-phone").text("");
         if (!validators.isValidPhone(value))
             $("#r-err-phone").text("Only 10 digits are allowed.");
-    }
-    else if (input == "r-email"){
-        $("#r-err-email").text("");
-        if (!validators.isValidEmail(value))
-            $("#r-err-email").text("Invalid email format.");
     }
     else {
         $("#r-err-address").text("");
