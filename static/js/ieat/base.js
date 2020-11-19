@@ -34,15 +34,15 @@ var validators = {
         return pattern.test(phone);
     },
     isValidOccupation: function(occupation){
-        let pattern = new RegExp(/^([a-z]+(\s[a-z]+)*){2,30}$/i);
+        let pattern = new RegExp(/^([a-z\sa-z]){2,30}$/i);
         return pattern.test(occupation);
     },
     isValidRestaurantName: function(name){
-        let pattern = new RegExp(/^([a-z]+(\s[a-z0-9]+)*){2,50}$/i);
+        let pattern = new RegExp(/^([a-z\sa-z0-9]){2,50}$/i);
         return pattern.test(name);
     },
     isValidAddress: function(address){
-        let pattern = new RegExp(/^([a-z0-9][\s,\-a-z0-9]){6,150}$/i);
+        let pattern = new RegExp(/^[a-z0-9\s\,\-a-z0-9]{6,200}$/i);
         return pattern.test(address);
     }
 }
@@ -51,7 +51,7 @@ function validate_customer_form(input, value){
     if (input == "c-name"){
         $("#c-err-name").text("");
         if (!validators.isValidName(value))
-            $("#c-err-name").text("Min 3, Max 30, only alphabets.");
+            $("#c-err-name").text("Min 3, Max 50, only alphabets.");
     }
     else if (input == "c-phone"){
         $("#c-err-phone").text("");
@@ -75,7 +75,7 @@ function validate_restaurant_form(input, value){
     if (input == "r-name"){
         $("#r-err-name").text("");
         if (!validators.isValidRestaurantName(value))
-            $("#r-err-name").text("Min 2, Max 30, only alphanumeric.");
+            $("#r-err-name").text("Min 2, Max 50, only alphanumeric.");
     }
     else if (input == "r-phone"){
         $("#r-err-phone").text("");
@@ -85,7 +85,7 @@ function validate_restaurant_form(input, value){
     else {
         $("#r-err-address").text("");
         if (!validators.isValidAddress(value))
-            $("#r-err-address").text("Min 6, Max 50, only alphanumeric.");
+            $("#r-err-address").text("Min 6, Max 200, only alphanumeric.");
     }       
 }
 

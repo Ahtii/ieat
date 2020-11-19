@@ -16,6 +16,6 @@ class Restaurant(models.Model):
     name = models.CharField(max_length=50)
     phone = models.CharField(validators=[phone_regex], max_length=10, unique=True)
     email = models.EmailField(null=True)
-    address = models.CharField(max_length=150)
+    address = models.CharField(max_length=200)
     heard_from = models.CharField(max_length=9)
     submit_date = models.DateField(default=datetime.date.today)
