@@ -36,8 +36,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-print("path:")
-print(os.path.dirname(__file__))
 SETTINGS_PATH = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 
 ROOT_URLCONF = 'ieat.urls'
@@ -114,4 +112,3 @@ STATIC_URL = '/static/'
 
 # emulating as static is in different server
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
-#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

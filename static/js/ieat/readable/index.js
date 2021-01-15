@@ -48,6 +48,6 @@ $(document).ready(function(){
 	});
     /* member register button */
     $(".register-tag button").on("click", function(){
-        $(".register-restaurant").trigger("click");
+        $(".register-customer").trigger("click");
     });
 });
