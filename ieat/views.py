@@ -31,15 +31,9 @@ def register_customer(request):
 	if email:
 		data.update({"email": email.lower()})
 	response = {}	
-	try:		
-		print("inside try")
-		print(data['name'])
-		db_customer = Customer.objects.filter(phone=data["phone"]).first()				
-		print("created customer")
-		print(db_customer)
-		if db_customer is None:	
-			print("adding data to customers...")
-			print(db_customer)			
+	try:						
+		db_customer = Customer.objects.filter(phone=data["phone"]).first()						
+		if db_customer is None:			
 			customer = Customer(**data)						
 			customer.save()					
 			formatted_date = customer.submit_date.strftime("%b %d %Y")
@@ -55,13 +49,10 @@ def register_customer(request):
 				], 
 				table_range='A:F'
 			)
-			print("everything worked fine")						
 		else:
 			response = {"error": "Phone already registered.", "type": "existing"}
 	except:
-		response = {"error": "Something went wrong.", "type": ""}
-	print("response is ")
-	print(response)	
+		response = {"error": "Something went wrong.", "type": ""}	
 	return JsonResponse(response)
 
 @csrf_exempt
