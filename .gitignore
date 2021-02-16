@@ -1,3 +1,8 @@
+# Custom
+ieat/wsgi.py
+manage.py
+templates/base.html
+static_cdn/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
