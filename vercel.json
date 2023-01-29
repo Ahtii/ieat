@@ -1,0 +1,18 @@
+{
+    "version": 2,
+    "builds": [{
+        "src": "ieat/ieat/wsgi.py",
+        "use": "@ardnt/vercel-python-wsgi",
+        "config": { "maxLambdaSize": "15mb" }
+    }],
+    "routes": [
+        {
+            "src": "/static/(.*)",
+            "dest": "/static/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "ieat/ieat/wsgi.py"
+        }
+    ]
+}
